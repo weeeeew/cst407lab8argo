@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cst407-deployment
+  labels:
+    app: cst407
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cst407
+  template:
+    metadata:
+      labels:
+        app: cst407
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: cst407
+        image: DockerUserName/nice_docker:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 80

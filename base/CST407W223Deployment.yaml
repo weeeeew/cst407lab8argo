@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: cst407
-        image: weeeeew/faasfirstapp:latest
+        image: weeeeew/nice_docker:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
